@@ -1,4 +1,5 @@
 import Input from "../form/Input";
+import Select from "../form/Select";
 import styles from "./ProjectForm.module.css";
 
 function ProjectForm() {
@@ -16,13 +17,7 @@ function ProjectForm() {
         name="budget"
         placeholder="Insira o orçamento total"
       />
-      <div>
-        <select name="category_id">
-          <option disabled selected>
-            Selecione a categoria
-          </option>
-        </select>
-      </div>
+      <Select mame ="category_id" text ="Selecione a categoria"/>
       <div>
         <input type="submit" value="Criar projeto" />
       </div>
