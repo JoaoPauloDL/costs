@@ -54,6 +54,28 @@
       "cost": 0,
       "services": [],
       "id": 5
+    },
+    {
+      "name": "Projeto Posto",
+      "budget": "1500",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 6
+    },
+    {
+      "name": "Projeto Excel",
+      "budget": "30000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 7
     }
   ],
   "categories": [
