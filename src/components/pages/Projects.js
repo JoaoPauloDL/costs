@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 function Projects() {
   const [projects, setProjects] = useState([]);
   const [removeLoading, setRemoveLoading] = useState(false);
+  const [projectMessege, setProjectMessege] = useState("");
 
   const location = useLocation();
   let message = "";
@@ -42,8 +43,9 @@ function Projects() {
       },
     })
       .then((resp) => resp.json())
-      .then((data) => {
-        setProjects(projects.filter((project) => project.id !== id))
+      .then(() => {
+        setProjects(projects.filter((project) => project.id !== id));
+        setProjectMessege("Projeto removido com sucesso!");
       })
       .catch((err) => console.log(err));
   }
@@ -56,6 +58,7 @@ function Projects() {
       </div>
 
       {message && <Message msg={message} type="success" />}
+      {projectMessege && <Message msg={projectMessege} type="success" />}
       <Container customClass="start">
         {projects.length > 0 &&
           projects.map((project) => (

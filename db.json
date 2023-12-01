@@ -1,17 +1,6 @@
 {
   "projects": [
     {
-      "name": "Start",
-      "budget": "60000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 1
-    },
-    {
       "name": "Projeto Posto",
       "budget": "1500",
       "category": {
