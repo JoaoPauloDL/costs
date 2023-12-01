@@ -29,10 +29,24 @@ function Projects() {
       .then((resp) => resp.json())
       .then((data) => {
         setProjects(data);
-        setRemoveLoading(true)
+        setRemoveLoading(true);
       })
       .catch((err) => console.log(err));
   }, []);
+
+  function removeProject(id) {
+    fetch(`http://localhost:5000/projects/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setProjects(projects.filter((project) => project.id !== id))
+      })
+      .catch((err) => console.log(err));
+  }
 
   return (
     <div className={styles.project_container}>
@@ -53,10 +67,10 @@ function Projects() {
               key={project.id}
             />
           ))}
-          {!removeLoading && <Loading/>}
-          {removeLoading && projects.length === 0 && (
-            <p>Não há projetos cadastrados</p>
-          )}
+        {!removeLoading && <Loading />}
+        {removeLoading && projects.length === 0 && (
+          <p>Não há projetos cadastrados</p>
+        )}
       </Container>
     </div>
   );
