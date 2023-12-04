@@ -32,6 +32,17 @@
       "cost": 0,
       "services": [],
       "id": 8
+    },
+    {
+      "name": "Clone Netflix",
+      "budget": "1500",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 9
     }
   ],
   "categories": [
